@@ -1,4 +1,6 @@
 import { Router } from "express";
+import logging from "../middleware/logging.js";
+import { validateAssignment } from "../middleware/assignmentValidation.js";
 
 import { assignments as assignmentsFromFile } from "../data/assignments.js";
 import { comments as commentsFromFile } from "../data/comments.js";
@@ -7,6 +9,8 @@ let assignments = [...assignmentsFromFile];
 let comments = [...commentsFromFile];
 
 const assignmentRouter = Router();
+
+assignmentRouter.use(logging);
 
 assignmentRouter.get("/", (req, res) => {
   return res.json({
@@ -31,7 +35,7 @@ assignmentRouter.get("/:id", (req, res) => {
   });
 });
 
-assignmentRouter.post("/", (req, res) => {
+assignmentRouter.post("/", validateAssignment, (req, res) => {
   const newAssignment = req.body;
   const newAssignmentId = assignments[assignments.length - 1].id + 1;
 
@@ -45,7 +49,7 @@ assignmentRouter.post("/", (req, res) => {
   });
 });
 
-assignmentRouter.put("/:id", (req, res) => {
+assignmentRouter.put("/:id", validateAssignment, (req, res) => {
   const updateAssignment = req.body;
   const assignmentId = +req.params.id;
 
@@ -71,7 +75,7 @@ assignmentRouter.put("/:id", (req, res) => {
   });
 });
 
-assignmentRouter.delete("/:id", (req, res) => {
+assignmentRouter.delete("/:id", validateAssignment, (req, res) => {
   const assignmentId = +req.params.id;
 
   const hasFound = assignments.find((assign) => assign.id === assignmentId);

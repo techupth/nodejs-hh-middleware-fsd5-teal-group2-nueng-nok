@@ -1,0 +1,16 @@
+
+IP: ::1 , Method GET , URL: / , Time: 9/1/2567 16:08:52
+IP: ::1 , Method GET , URL: /1 , Time: 9/1/2567 16:09:26
+IP: ::1 , Method DELETE , URL: /1 , Time: 9/1/2567 16:10:21
+IP: ::1 , Method GET , Endpoint /assignments /1 , Time: 9/1/2567 16:13:57
+IP: ::1 , Method GET , Endpoint /assignments /1/sdsd , Time: 9/1/2567 16:16:36
+IP: ::1 , Method GET , Endpoint /assignments /10 , Time: 9/1/2567 16:17:02
+IP: ::1 , Method GET , Endpoint /assignments /?limit=11 , Time: 9/1/2567 16:42:32
+IP: ::1 , Method GET , Endpoint /assignments /?limit=1 , Time: 9/1/2567 16:43:40
+IP: ::1 , Method GET , Endpoint /assignments /1 , Time: 9/1/2567 16:43:51
+IP: ::1 , Method GET , Endpoint /assignments / , Time: 9/1/2567 16:45:32
+IP: ::1 , Method GET , Endpoint /assignments / , Time: 9/1/2567 16:47:51
+IP: ::1 , Method GET , Endpoint /assignments / , Time: 9/1/2567 16:52:56
+IP: ::1 , Method POST , Endpoint /assignments / , Time: 9/1/2567 16:53:49
+IP: ::1 , Method POST , Endpoint /assignments / , Time: 9/1/2567 16:55:36
+IP: ::1 , Method GET , Endpoint /assignments / , Time: 9/1/2567 16:55:46
